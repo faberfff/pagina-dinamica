@@ -10,12 +10,19 @@ const gameSchema = new Schema( {
     trim: true,
   },
 
-  gamers: [{
+  idGamer: {
     type: String,
-    trim: true,
-    required: [true, 'El nombre del jugador es requerido'],
-    lowercase: true,
-  }],
+    default: 'fffff-ggg-jjjjj'
+  },
+
+  gamers: {
+    type: [{
+      type: String,
+      trim: true,
+      required: [true, 'El nombre del jugador es requerido'],
+    }],
+    
+  },
 
   inprogress: {
     type: Boolean,

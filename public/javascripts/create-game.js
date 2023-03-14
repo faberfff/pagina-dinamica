@@ -33,6 +33,20 @@ button.addEventListener('click', (e) => {
    
 });
 
+const tirarDados = (min, max) => {
+    return Math.floor(Math.random() * (max - min)) + min;
+};
+
+
+    p1 = tirarDados(1, 6);
+    p2 = tirarDados(1, 6);
+    p3 = tirarDados(1, 6);
+
+    console.log({p1, p2, p3});
+
+
+
+
 /**
 
 button.addEventListener('click', (e) => {

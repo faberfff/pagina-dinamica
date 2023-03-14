@@ -27,11 +27,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', require('./routes/index'));
-app.use('/', require('./routes/game'));
+app.use('/', require('./routes/index.routes'));
+app.use('/', require('./routes/game-cam.routes'));
 
-app.use('/game-all', require('./routes/game-all'));
-app.use('/game', require('./routes/create-game'));
+app.use('/gameprueba', require('./routes/gameprueba.routes'));
+//app.use('/', require('./routes/gamebyid.routes'));
+
+
+app.use('/game', require('./routes/game.routes'));
+app.use('/create-game.routes', require('./routes/create-game.routes'));
 //app.use('/games', require('./routes/games'));
 
 
@@ -52,7 +56,6 @@ app.use('/user', require('./routes/partial-change-user'));*/
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
   // render the error page
   res.status(err.status || 500);
   res.render('error');
