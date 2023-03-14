@@ -1,4 +1,4 @@
-# pagina-dinamica
+# pagina-dinamica  cantera # 2 Sofka U
 Iniciación con el gestor de plantillas pug
 ##Juego de dados para múltiples jugadores.
 ## Algunas imagenes del aplicativo en funcionamiento:## Algunas imagenes del aplicativo en funcionamiento:
